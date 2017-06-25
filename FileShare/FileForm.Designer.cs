@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FileForm));
             this.ms_MenuStrip = new System.Windows.Forms.MenuStrip();
             this.tsmi_File = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmi_SelectFile = new System.Windows.Forms.ToolStripMenuItem();
@@ -288,7 +289,7 @@
             this.clk_Time.Name = "clk_Time";
             this.clk_Time.Size = new System.Drawing.Size(34, 13);
             this.clk_Time.TabIndex = 13;
-            this.clk_Time.Text = "11:04";
+            this.clk_Time.Text = "15:39";
             // 
             // flv_FileList
             // 
@@ -347,6 +348,7 @@
             this.Controls.Add(this.lbl_Seperator_4);
             this.Controls.Add(this.lbl_Seperator_5);
             this.Controls.Add(this.flv_FileList);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.ms_MenuStrip;
             this.MinimumSize = new System.Drawing.Size(600, 400);
             this.Name = "FileForm";

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ReceiveForm));
             this.lbl_Receiver = new System.Windows.Forms.Label();
             this.lbl_DataTransfered = new System.Windows.Forms.Label();
             this.prb_TransferProgress = new System.Windows.Forms.ProgressBar();
@@ -91,6 +92,7 @@
             this.Controls.Add(this.lbl_DataTransfered);
             this.Controls.Add(this.lbl_Receiver);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "ReceiveForm";
             this.Tag = "";

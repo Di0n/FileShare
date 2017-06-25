@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SendForm));
             this.btn_CancelTransfers = new System.Windows.Forms.Button();
             this.lbl_Seperator = new System.Windows.Forms.Label();
             this.lbl_Remaining = new System.Windows.Forms.Label();
@@ -89,7 +90,7 @@
             this.clock1.Name = "clock1";
             this.clock1.Size = new System.Drawing.Size(34, 13);
             this.clock1.TabIndex = 11;
-            this.clock1.Text = "15:58";
+            this.clock1.Text = "15:41";
             // 
             // slv_Receivers
             // 
@@ -141,6 +142,7 @@
             this.Controls.Add(this.lbl_Seperator);
             this.Controls.Add(this.btn_CancelTransfers);
             this.Controls.Add(this.slv_Receivers);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimumSize = new System.Drawing.Size(500, 300);
             this.Name = "SendForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;

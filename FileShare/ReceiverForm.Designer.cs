@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ReceiverForm));
             this.tb_AddressBox = new System.Windows.Forms.TextBox();
             this.btn_Add = new System.Windows.Forms.Button();
             this.btn_Send = new System.Windows.Forms.Button();
@@ -115,6 +116,7 @@
             this.Controls.Add(this.btn_Add);
             this.Controls.Add(this.tb_AddressBox);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "ReceiverForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;

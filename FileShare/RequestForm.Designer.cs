@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RequestForm));
             this.lbl_Request = new System.Windows.Forms.Label();
             this.lbl_RequestCountdown = new System.Windows.Forms.Label();
             this.btn_No = new System.Windows.Forms.Button();
@@ -138,6 +139,7 @@
             this.Controls.Add(this.lbl_MenuBackground);
             this.Controls.Add(this.lbl_Background);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "RequestForm";

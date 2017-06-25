@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ZipForm));
             this.lbl_ZipText = new System.Windows.Forms.Label();
             this.prb_ZipProgress = new System.Windows.Forms.ProgressBar();
             this.btn_CancelZip = new System.Windows.Forms.Button();
@@ -69,6 +70,7 @@
             this.Controls.Add(this.prb_ZipProgress);
             this.Controls.Add(this.lbl_ZipText);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "ZipForm";
             this.Tag = "";

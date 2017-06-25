@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NetworkComputersForm));
             this.pb_RefreshAnimation = new System.Windows.Forms.PictureBox();
             this.pb_Refresh = new System.Windows.Forms.PictureBox();
             this.pb_Add = new System.Windows.Forms.PictureBox();
@@ -101,6 +102,7 @@
             this.Controls.Add(this.pb_Refresh);
             this.Controls.Add(this.pb_Add);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "NetworkComputersForm";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
