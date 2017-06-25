@@ -95,7 +95,6 @@
     <Compile Include="FileReceiver.cs" />
     <Compile Include="FileSender.cs" />
     <Compile Include="FormConnector.cs" />
-    <Compile Include="Helpers\DatabaseHandler.cs" />
     <Compile Include="Helpers\ExtensionMethods.cs" />
     <Compile Include="Helpers\KnownFolders.cs" />
     <Compile Include="Helpers\WindowFlasher.cs" />
@@ -217,18 +216,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Refresh_Animation_46.gif" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\DeY.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="FileShareDB.mdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="FileShareDB_log.ldf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <DependentUpon>FileShareDB.mdf</DependentUpon>
-    </Content>
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.5">

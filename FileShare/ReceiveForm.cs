@@ -18,20 +18,19 @@ namespace FileShare
         private volatile bool cancellationRequested;
         private volatile bool transferInProgress;
         private List<int> transferTimes;
-        private DateTime setTime;
-        DatabaseHandler dbh;
+        private DateTime speedCheckTime;
 
         public ReceiveForm(Computer sender, long totalFileSize)
         {
             InitializeComponent();
             this.sender = sender;
             this.totalFileSize = totalFileSize;
-            setTime = DateTime.Now;
+            speedCheckTime = DateTime.Now;
             transferTimes = new List<int>();
             transferInProgress = true;
         }
 
-        public async Task UpdateStatus(long totalReceived, int transferSpeed)
+        public void UpdateStatus(long totalReceived, int transferSpeed)
         {
             int percentage = (int)(100.0d * totalReceived / totalFileSize);
 
@@ -57,12 +56,12 @@ namespace FileShare
 
                 if (ts.TotalMilliseconds != 0)
                     transferTimes.Add((int)ts.TotalMilliseconds);
-                if ((DateTime.Now - setTime).TotalSeconds >= 1)
+                if ((DateTime.Now - speedCheckTime).TotalSeconds >= 1)
                 {
                     TimeSpan timeLeft = TimeSpan.FromMilliseconds(transferTimes.Average());
                     this.BeginInvoke((MethodInvoker)delegate { lbl_EstimatedTime.Text = String.Format("Geschatte tijd: {0}", timeLeft.ToString(@"hh\h\:mm\m\:ss\s")); });
                     transferTimes.Clear();
-                    setTime = DateTime.Now;
+                    speedCheckTime = DateTime.Now;
                 }
             }
 
@@ -74,16 +73,6 @@ namespace FileShare
                 {
                     btn_Stop.Text = "Sluiten";
                 });
-                int transferTime = (int)DateTime.Now.Subtract(setTime).TotalSeconds;
-                Transfer transfer = new Transfer("d", DateTime.Now, transferTime, totalFileSize);
-
-                dbh = new DatabaseHandler();
-
-                try
-                {
-                    await dbh.AddTransfer(transfer, sender);
-                }
-                catch (System.Data.SqlClient.SqlException) { }
             }
         }
 

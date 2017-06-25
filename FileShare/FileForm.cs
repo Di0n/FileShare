@@ -6,6 +6,7 @@ using System.Windows.Forms;
 using FileShare.Properties;
 using System.IO;
 using System.Net.Sockets;
+using System.Drawing;
 
 namespace FileShare
 {
@@ -20,7 +21,7 @@ namespace FileShare
             receive.ConfigureAwait(false);
             receive.Start();
 
-            ni_NotifyIcon.Icon = Resources.DeY;
+            ni_NotifyIcon.Icon = SystemIcons.Application;
         }
 
         private void RunFileReceiveServer()
@@ -151,12 +152,12 @@ namespace FileShare
             args.Accept = true;
         }
 
-        private async void FileReceiver_ProgressChanged(object sender, FileTransferProgressEventArgs args)
+        private void FileReceiver_ProgressChanged(object sender, FileTransferProgressEventArgs args)
         {
             if (receiveForm != null)
             {
                 if (receiveForm.CancellationRequested) args.Cancel = true;
-                else await receiveForm.UpdateStatus(args.BytesTransfered, args.TransferSpeed);
+                else receiveForm.UpdateStatus(args.BytesTransfered, args.TransferSpeed);
             }
         }
 
@@ -205,14 +206,15 @@ namespace FileShare
                 return;
             }
 
-            FormVisible = false;
+            
             List<Computer> computers = SelectReceivers();
 
             if (computers == null)
             {
-                FormVisible = true;
                 return;
             }
+
+            FormVisible = false;
 
             List<File> files = flv_FileList.GetFiles().ToList();
 

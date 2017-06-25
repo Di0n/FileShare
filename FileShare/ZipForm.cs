@@ -52,7 +52,11 @@ namespace FileShare
                         string fullName = appTempDir + tempFileName;
 
                         zipFile.Save(fullName);
-                        return new File(fullName);
+
+                        if (!cancelZip)
+                            return new File(fullName);
+                        else
+                            return null;
                     }
                 });
         }
@@ -61,7 +65,10 @@ namespace FileShare
         private void ZipFile_SaveProgress(object sender, SaveProgressEventArgs e)
         {
             if (cancelZip)
+            {
                 e.Cancel = true;
+                return;
+            }
 
             totalBytesTransfered = e.BytesTransferred - totalBytesTransfered;
             int totalPercentage = (int)(100.0d * totalBytesTransfered / totalFileSize);

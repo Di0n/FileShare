@@ -173,39 +173,12 @@ namespace FileShare
                     {
                         currentReceiver.BackColor = Color.LightGreen;
                         status.Text = "Voltooid";
-
-                        Transfer dbTransfer = new Transfer("u", DateTime.Now, (int)TimeSpan.FromMilliseconds(transferTimer.ElapsedMilliseconds).TotalSeconds, file.Size);
-                        Computer dbComputer = new Computer(requestResponse.ComputerName, recv.IP);
-
-                        await AddTransferToDBAsync(dbTransfer, dbComputer);
                     }
                 }
             }
 
             cancelTokenSource = null;
             lbl_Remaining.Text = "Resterend: 0";
-        }
-
-        /// <summary>
-        /// Adds a transfer to the database.
-        /// </summary>
-        /// <param name="transfer"></param>
-        /// <param name="computer"></param>
-        /// <returns></returns>
-        private async Task AddTransferToDBAsync(Transfer transfer, Computer computer)
-        {
-            using (DatabaseHandler dbh = new DatabaseHandler())
-            {
-                try
-                {
-                    await dbh.AddTransfer(transfer, computer);
-
-                }
-                catch (System.Data.SqlClient.SqlException)
-                {
-
-                }
-            }
         }
 
         /// <summary>
