@@ -47,7 +47,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>Resources\FileShareIcon.ico</ApplicationIcon>
+    <ApplicationIcon>Resources\FileShareIcon256.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="DotNetZip, Version=1.10.1.0, Culture=neutral, PublicKeyToken=6583c7c814667745, processorArchitecture=MSIL">
@@ -191,6 +194,7 @@
     <EmbeddedResource Include="ZipForm.resx">
       <DependentUpon>ZipForm.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="app.manifest" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -239,6 +243,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\FileShareIcon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FileShareIcon256.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
