@@ -21,7 +21,7 @@ namespace FileShare
             receive.ConfigureAwait(false);
             receive.Start();
 
-            ni_NotifyIcon.Icon = Resources.FileShareIcon;
+            ni_NotifyIcon.Icon = Resources.FileShareIcon256;
         }
 
         private void RunFileReceiveServer()
