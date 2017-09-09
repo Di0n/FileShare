@@ -289,7 +289,7 @@
             this.clk_Time.Name = "clk_Time";
             this.clk_Time.Size = new System.Drawing.Size(34, 13);
             this.clk_Time.TabIndex = 13;
-            this.clk_Time.Text = "15:39";
+            this.clk_Time.Text = "13:39";
             // 
             // flv_FileList
             // 

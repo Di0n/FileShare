@@ -90,7 +90,7 @@
             this.clock1.Name = "clock1";
             this.clock1.Size = new System.Drawing.Size(34, 13);
             this.clock1.TabIndex = 11;
-            this.clock1.Text = "15:41";
+            this.clock1.Text = "13:42";
             // 
             // slv_Receivers
             // 
