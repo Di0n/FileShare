@@ -43,7 +43,7 @@
             // 
             this.pb_RefreshAnimation.BackColor = System.Drawing.Color.Transparent;
             this.pb_RefreshAnimation.Image = global::FileShare.Properties.Resources.Refresh_Animation_46;
-            this.pb_RefreshAnimation.Location = new System.Drawing.Point(65, 115);
+            this.pb_RefreshAnimation.Location = new System.Drawing.Point(90, 150);
             this.pb_RefreshAnimation.Name = "pb_RefreshAnimation";
             this.pb_RefreshAnimation.Size = new System.Drawing.Size(46, 46);
             this.pb_RefreshAnimation.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -54,7 +54,7 @@
             // pb_Refresh
             // 
             this.pb_Refresh.Image = global::FileShare.Properties.Resources.Command_Refresh_32;
-            this.pb_Refresh.Location = new System.Drawing.Point(142, 269);
+            this.pb_Refresh.Location = new System.Drawing.Point(190, 341);
             this.pb_Refresh.Name = "pb_Refresh";
             this.pb_Refresh.Size = new System.Drawing.Size(30, 30);
             this.pb_Refresh.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -65,7 +65,7 @@
             // pb_Add
             // 
             this.pb_Add.Image = global::FileShare.Properties.Resources.Add_New_32;
-            this.pb_Add.Location = new System.Drawing.Point(12, 269);
+            this.pb_Add.Location = new System.Drawing.Point(12, 341);
             this.pb_Add.Name = "pb_Add";
             this.pb_Add.Size = new System.Drawing.Size(30, 30);
             this.pb_Add.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -80,7 +80,7 @@
             this.lv_NetworkComputers.Location = new System.Drawing.Point(12, 12);
             this.lv_NetworkComputers.MultiSelect = false;
             this.lv_NetworkComputers.Name = "lv_NetworkComputers";
-            this.lv_NetworkComputers.Size = new System.Drawing.Size(160, 251);
+            this.lv_NetworkComputers.Size = new System.Drawing.Size(208, 323);
             this.lv_NetworkComputers.TabIndex = 3;
             this.lv_NetworkComputers.UseCompatibleStateImageBehavior = false;
             this.lv_NetworkComputers.View = System.Windows.Forms.View.Details;
@@ -93,8 +93,9 @@
             // 
             // NetworkComputersForm
             // 
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.ClientSize = new System.Drawing.Size(184, 311);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(232, 383);
             this.ControlBox = false;
             this.Controls.Add(this.pb_RefreshAnimation);
             this.Controls.Add(this.lv_NetworkComputers);
